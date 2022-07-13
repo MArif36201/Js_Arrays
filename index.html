@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>js-Arrays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!-- <h1>
+        Pop function in js-Arrays
+    </h1>
+    <script>
+        let fruits = ["Apple", "Orange", "Pear"];
+
+alert( fruits.pop() ); // remove "Pear" and alert it
+
+alert( fruits ); // Apple, Orange
+    </script> -->
+    <!-- <h1>Push function in js-Arrays</h1>
+    <script>
+        let fruits = ["Apple", "Orange"];
+
+         fruits.push("Pear");
+
+          alert( fruits ); // Apple, Orange, Pear
+    </script> -->
+    <!-- <h1>Push and unshift Methode</h1>
+    <script>
+        let fruits = ["Apple"];
+
+fruits.push("Orange", "Peach");
+fruits.unshift("Pineapple", "Lemon");
+
+// ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
+alert( fruits );
+    </script> -->
+    <h1>
+        Q No 1
+    </h1>
+    <p> Write a JavaScript program to check whether a string starts with capital letter and false otherwise </p>
+    <script>
+        function checkFirstLetterCapital(_string)
+{
+       return /[A-Z]/.test( _string[0]);
+}
+let dummyString1 = "javascript is Scripted language";
+let dummyString2 = "JAVAScript Is scripted LanguaGE";
+document.write( checkFirstLetterCapital(dummyString1) );
+document.write( checkFirstLetterCapital(dummyString2) );
+    </script>
+
+
+    <h1>Q No 2</h1>
+    <script>
+    var army=["12456886748949047489"];  
+  
+  if(army.indexOf("8") !== -1)  
+  {  
+          document.write("Yes, the value exists!")  
+  }   
+  else  
+  {  
+          document.write("No, the value is absent.")  
+  }  
+    </script>
+
+    
+ <h1>Q No 3</h1>
+ <p>Write a JavaScript program to calculate days from current date left until next Independent day of Pakistan</p>
+ <script>
+    today=new Date();
+var indday=new Date(today.getFullYear(), 07,14);
+if (today.getMonth()==11 && today.getDate()>14) 
+{
+indday.setFullYear(indday.getFullYear()+1); 
+}  
+var one_day=1000*60*60*24;
+document.write(Math.ceil((indday.getTime()-today.getTime())/(one_day))+
+" days left until Independent day of Pakistan!");
+
+ </script>
+ <h1>
+    Random Number Array
+ </h1>
+ <p id="loopResult"></p>
+ <script >
+    function showResults() {
+
+var x = 0,
+    loopOutput = "";
+
+while (x < 30) {
+  x++;
+  var randomNum = Math.floor(Math.random() * 30);
+   loopOutput += randomNum ;
+}
+
+document.getElementById("loopResult").innerHTML = loopOutput;
+
+}
+
+showResults();
+</script>
+</body>
+</html>
